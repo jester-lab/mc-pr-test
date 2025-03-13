@@ -1,0 +1,29 @@
+name: Run SuperLinter
+
+on:
+  push:
+    branches:
+      - main  # Run SuperLinter on push to the main branch
+  pull_request:
+    branches:
+      - main  # Run SuperLinter on pull requests to the main branch
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest  # Use an Ubuntu environment
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2  # Check out the code to the runner
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v1  # Set up Docker
+
+      - name: Run SuperLinter
+        uses: github/super-linter@v4  # Run SuperLinter action
+        env:
+          RUN_LOCAL: true  # Set this to true if running locally on your machine
+        with:
+          # Optional: Specify the languages you want to lint (if you want to limit to specific languages)
+          LINTER_RULES_PATH: .github/linters/  # Path to custom linter configuration (optional)
+          FILTER_REGEX_EXCLUDE: 'docs/*'  # You can exclude files or directories
