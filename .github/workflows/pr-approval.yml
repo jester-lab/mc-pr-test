@@ -16,6 +16,6 @@
          - name: Check Team Approvals
            uses: jefeish/github-action-team-approval@main
            with:
-             team_name: A-Team
+             team_name: a-team
              required_approvals: 2
              token: ${{ secrets.GITHUB_TOKEN }}
