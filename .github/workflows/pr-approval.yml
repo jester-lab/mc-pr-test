@@ -13,3 +13,4 @@
            with:
              team_name: A-Team
              required_approvals: 2
+             token: ${{ secrets.GITHUB_TOKEN }}
