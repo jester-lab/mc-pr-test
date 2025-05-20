@@ -11,5 +11,5 @@
          - name: Check Team Approvals
            uses: jefeish/github-action-team-approval@main
            with:
-             team-name: 'your-team-name'
+             team-name: B-Team
              required-approvals: 2
