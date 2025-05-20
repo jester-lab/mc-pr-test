@@ -8,7 +8,6 @@
      contents: read
      pull-requests: read
      issues: read
-     members: read
   
    jobs:
      approval-check:
