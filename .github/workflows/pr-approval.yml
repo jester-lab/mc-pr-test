@@ -18,4 +18,4 @@
            with:
              team_name: a-team
              required_approvals: 2
-             token: ${{ secrets.GITHUB_TOKEN }}
+             token: ${{ secrets.GH_ADMIN_SECRET }}
