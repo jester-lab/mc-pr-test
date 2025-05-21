@@ -1,12 +1,7 @@
 name: Run SuperLinter
 
 on:
-  push:
-    branches:
-      - main  # Run SuperLinter on push to the main branch
-  pull_request:
-    branches:
-      - main  # Run SuperLinter on pull requests to the main branch
+  workflow_dispatch:
 
 jobs:
   lint:
